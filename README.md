@@ -9,11 +9,15 @@ Para executar localmente, siga os passos abaixo:
 1. Clone o repositório:<br>
 ```git clone git@github.com:ricardocarmo72/api_sample.git```
 
-2. Ative a env (ambiente Windows):<br>
+2. Ative o ambiente virtual:<br>
+Se estiver usando Windows, apenas ative a env que está na pasta env e pule para o passo 3:<br>
 ```env\scripts\activate```<br>
-Se for utilizar Linux, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
+
+Se estiver usando Linux, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
 ```python3 -m venv env```<br>
 ```source env\bin\activate```<br>
+Em seguida instale as bibliotecas requeridas:
+```pip install -r src/requirements.txt```<br>
 
 3. Crie um banco de dados PostgreSQL com o nome hyperativa via PgAdmin ou outra ferramenta.
 
