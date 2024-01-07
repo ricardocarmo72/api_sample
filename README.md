@@ -15,14 +15,17 @@ Se estiver usando Windows, apenas ative a env que está na pasta env e pule para
 Se estiver usando Linux, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
 ```python3 -m venv env```<br>
 ```source env/bin/activate```<br>
-Em seguida instale as bibliotecas requeridas:
+Em seguida instale as bibliotecas requeridas:<br>
 ```pip install -r src/requirements.txt```<br>
 
-3. Crie um banco de dados PostgreSQL com o nome hyperativa via PgAdmin ou outra ferramenta.
+3. Crie um banco de dados PostgreSQL com o nome ```hyperativa``` via PgAdmin ou outra ferramenta.
 
-4. Acesse a pasta src no terminal e digite o comando:<br>
+4. Acesse a pasta src no terminal e rode as migrações:<br>
 ```cd src```<br>
 ```python manage.py migrate```<br>
 
-5. Inicie a aplicação:<br>
+5. Crie um usuário superuser:<br>
+```python manage.py createsuperuser```
+
+6. Suba a aplicação:<br>
 ```python manage.py runserver```
