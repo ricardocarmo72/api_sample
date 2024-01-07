@@ -38,9 +38,11 @@ A aplicação expõe dois endpoints:
 End-point para autenticação do usuário:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
 Exemplo:<br>
-    curl --location 'http://localhost:8000/token/' \
+```    
+curl --location 'http://localhost:8000/token/' \
     --form 'username="ricardo"' \
     --form 'password="123mudar"'
+```
 <br>
 
 Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
