@@ -35,7 +35,7 @@ Para rodar os testes, digite:<br>
 
 A aplicação expõe dois endpoints:
 
-<h1>End-point para autenticação do usuário:</h1><br>
+<h3>End-point para autenticação do usuário:</h3><br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
 Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 acima):<br>
 ```{"username": "test_user", "password": "test123"}```
