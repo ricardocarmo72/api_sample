@@ -56,7 +56,7 @@ Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "single", "card_number": "1234567890"}```
 
-- Para inserir vários cards a partir de um arquivo .TXT:
+- Para inserir vários cards a partir de um arquivo .TXT:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "multiple", "file_uploaded": <arquivo>}```
