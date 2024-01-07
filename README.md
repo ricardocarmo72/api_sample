@@ -29,3 +29,15 @@ Em seguida instale as bibliotecas requeridas:<br>
 
 6. Suba a aplicação:<br>
 ```python manage.py runserver```
+
+Para rodar os testes, digite:<br>
+```python manage.py test```
+
+A aplicação expõe dois endpoints:
+
+End-point para autenticação do usuário:<br>
+Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
+Payload de exemplo:<br>
+```{"username": "test_user", "password": "teste123"}```<br>
+
+Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
