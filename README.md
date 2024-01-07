@@ -33,7 +33,7 @@ Em seguida instale as bibliotecas requeridas:<br>
 Para rodar os testes, digite:<br>
 ```python manage.py test```
 
-A aplicação expõe dois endpoints:
+A aplicação expõe dois endpoints:<br>
 
 <h3>End-point para autenticação do usuário:</h3>
 
@@ -43,7 +43,7 @@ Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 aci
 
 Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
 
-(Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token)
+(Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token)<br>
 
 <h3>End-point para consulta de dados</h3>
 
@@ -60,3 +60,7 @@ Exemplo de payload:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "multiple", "file_uploaded": <arquivo>}```
+
+<h3>Postman</h3>
+Para facilitar os testes com a API, foi adicionado o arquivo Hyperativa.postman_collection.json na pasta raiz do projeto.
+Basta importar no Postman e acessar os endpoints da coleção.
