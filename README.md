@@ -35,30 +35,28 @@ Para rodar os testes, digite:<br>
 
 A aplicação expõe dois endpoints:
 
-<h3>End-point para autenticação do usuário:</h3><br>
+<h3>End-point para autenticação do usuário:</h3>
+
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
 Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 acima):<br>
-```{"username": "test_user", "password": "test123"}```
-<br>
+```{"username": "test_user", "password": "test123"}```<br>
 
 Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
 
 (Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token)
 
-7. Para consultar um card:<br>
+<h3>End-point para consulta de dados</h3>
+
 Deve ser executado via <b>GET</b>: ```http://localhost:8000/api/?card_number=1234567890```<br>
 
-8. Para inserir um único card:<br>
+<h3>End-point para inserção de dados</h3>
+
+- Para inserir um único card:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "single", "card_number": "1234567890"}```
 
-9. Para consultar um card number:<br>
-Deve ser executado via <b>GET</b>: ```http://localhost:8000/api/```<br>
-Exemplo de payload:<br>
-```{"card_number": "1234567890"}```<br>
-
-10. Para inserir vários cards a partir de um arquivo .TXT:
+- Para inserir vários cards a partir de um arquivo .TXT:
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "multiple", "file_uploaded": <arquivo>}```
