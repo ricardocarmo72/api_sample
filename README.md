@@ -12,10 +12,9 @@ Para executar localmente, siga os passos abaixo:
 2. Ative o ambiente virtual:<br>
 Se estiver usando Windows, apenas ative a env que está na pasta env e pule para o passo 3:<br>
 ```env\scripts\activate```<br>
-
 Se estiver usando Linux, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
 ```python3 -m venv env```<br>
-```source env\bin\activate```<br>
+```source env/bin/activate```<br>
 Em seguida instale as bibliotecas requeridas:
 ```pip install -r src/requirements.txt```<br>
 
