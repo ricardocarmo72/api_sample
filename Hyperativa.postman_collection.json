@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "14d4ef3e-4d02-4c87-9e0f-fd16044f9355",
+		"name": "Hyperativa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19333674"
+	},
+	"item": [
+		{
+			"name": "Obtém token de autenticação",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/token/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insere um único card number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0Njc4NTU1LCJpYXQiOjE3MDQ2NjA1NTUsImp0aSI6ImI1MzcwNjVkMTIwNjQ2OTE5OGU3Y2YyMjg5MzYwYTA0IiwidXNlcl9pZCI6MX0.ouvnCdAeb8XO6SNnaNt948ozJjLwUrZuhR6BTlmX37o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "insert_mode",
+							"value": "single",
+							"type": "text"
+						},
+						{
+							"key": "card_number",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insere múltiplos card numbers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0Njc4NTU1LCJpYXQiOjE3MDQ2NjA1NTUsImp0aSI6ImI1MzcwNjVkMTIwNjQ2OTE5OGU3Y2YyMjg5MzYwYTA0IiwidXNlcl9pZCI6MX0.ouvnCdAeb8XO6SNnaNt948ozJjLwUrZuhR6BTlmX37o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "insert_mode",
+							"value": "multiple",
+							"type": "text"
+						},
+						{
+							"key": "file_uploaded",
+							"type": "file",
+							"src": "/C:/Users/Ricardo/Documents/DESAFIO-HYPERATIVA.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta um card number",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0Njc4NTU1LCJpYXQiOjE3MDQ2NjA1NTUsImp0aSI6ImI1MzcwNjVkMTIwNjQ2OTE5OGU3Y2YyMjg5MzYwYTA0IiwidXNlcl9pZCI6MX0.ouvnCdAeb8XO6SNnaNt948ozJjLwUrZuhR6BTlmX37o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/?card_number=1234567890",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						""
+					],
+					"query": [
+						{
+							"key": "card_number",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

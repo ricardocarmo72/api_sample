@@ -37,7 +37,25 @@ A aplicação expõe dois endpoints:
 
 End-point para autenticação do usuário:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
-Payload de exemplo:<br>
-```{"username": "test_user", "password": "teste123"}```<br>
+Exemplo:<br>
+```curl --location 'http://localhost:8000/token/' \
+--form 'username="ricardo"' \
+--form 'password="123mudar"'
+```<br>
+
 
 Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
+
+7. Para consultar um card:<br>
+Deve ser executado via <b>GET</b>: ```http://localhost:8000/api/?card_number=1234567890```<br>
+
+8. Para inserir um único card:<br>
+Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
+Exemplo de payload:<br>
+```{"insert_mode": "single", "card_number": "1234567890"}```
+
+9. Para consultar um card number:<br>
+Deve ser executado via <b>GET</b>: ```http://localhost:8000/api/```<br>
+Exemplo de payload:<br>
+```{"card_number": "1234567890"}```<br>
+A requisição deve informar o token de autenticação no header:
