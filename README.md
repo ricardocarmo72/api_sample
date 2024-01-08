@@ -1,5 +1,4 @@
-# api_sample
-Projeto Teste API
+# Projeto Teste API
 
 Este projeto visa demonstrar a construção de uma API para persistência de números de cartões.
 Foi desenvolvido em Python, juntamente com os frameworks Django e Django Rest Framework.
