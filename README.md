@@ -37,7 +37,7 @@ Para rodar os testes, digite:<br>
 <h3>Documentação</h3>
 
 A documentação (contratos da API) pode ser conferida via Swagger:<br>
-```http://localhost:8000/token/```<br>
+```http://localhost:8000/swagger/```<br>
 
 A aplicação expõe dois endpoints:<br>
 
