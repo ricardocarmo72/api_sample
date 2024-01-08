@@ -48,17 +48,20 @@ Este endpoint retorna um <em>access token</em> que pode ser utilizado no outro e
 
 <h3>End-point para consulta de dados</h3>
 
-Deve ser executado via <b>GET</b>: ```http://localhost:8000/api/?card_number=1234567890```<br>
+Deve ser executado via <b>GET</b>:<br>
+```http://localhost:8000/api/?card_number=1234567890```<br>
 
 <h3>End-point para inserção de dados</h3>
 
 - Para inserir um único card:<br>
-Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
+Deve ser executado via <b>POST</b>:<br>
+```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "single", "card_number": "1234567890"}```
 
 - Para inserir vários cards a partir de um arquivo .TXT:<br>
-Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
+Deve ser executado via <b>POST</b>:<br>
+```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "multiple", "file_uploaded": <arquivo>}```
 
