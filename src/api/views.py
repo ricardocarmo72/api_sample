@@ -4,6 +4,11 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.parsers import MultiPartParser
 from rest_framework.exceptions import NotFound
+from rest_framework.decorators import action
+
+from drf_yasg import openapi
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg.openapi import Parameter
 
 from api.services import FullCardService
 from api.serializers import FullCardSerializer, InsertSerializer
@@ -18,6 +23,20 @@ class FullCardViewSet(ViewSet):
         self.service = FullCardService()
         super().__init__(**kwargs)
 
+    @swagger_auto_schema(
+        manual_parameters= [
+            Parameter(
+                name="card_number",
+                description="Número do cartão completo a pesquisar",
+                type=openapi.TYPE_STRING,
+                in_=openapi.IN_QUERY,
+                required=False,
+            ),
+        ],
+        operation_description='Verifica se um número de cartão existe na base de dados.',
+        responses={status.HTTP_200_OK: openapi.Response(description="Query full card.", 
+                                                        schema=FullCardSerializer(many=False))}
+    )
     def list(self, request):
         card_number = request.query_params.get("card_number")
         data = self.service.find_card(card_number)
@@ -27,6 +46,30 @@ class FullCardViewSet(ViewSet):
         serializer = FullCardSerializer(data, many=False)
         return Response(serializer.data)
 
+    @swagger_auto_schema(
+        manual_parameters=[
+            Parameter(
+                name="insert_mode",
+                description="Modo de inserção: single para um único número, multiple para inserção em lote",
+                type=openapi.TYPE_STRING,
+                in_=openapi.IN_FORM,
+                required=True,
+            ),
+            Parameter(
+                name="card_number",
+                description="Número do cartão a inserir quando insert_mode=single",
+                type=openapi.TYPE_STRING,
+                in_=openapi.IN_FORM,
+                required=True,
+            ),
+            Parameter(name="file_uploaded",
+                    in_=openapi.IN_FORM,
+                    type=openapi.TYPE_FILE,
+                    required=False,
+                    description="Arquivo .TXT para upload quando insert_mode=multiple")
+        ]
+    )
+    @action(methods=['post'], detail=False)
     def create(self, request):
         serializer = InsertSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',    
+    'drf_yasg',
     'api',
 ]
 
@@ -149,3 +150,27 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME_LATE_USER': timedelta(days=1),
     'SLIDING_TOKEN_LIFETIME_LATE_USER': timedelta(days=30),
 }
+
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    },    
+    "USE_SESSION_AUTH": False,
+    "REFETCH_SCHEMA_WITH_AUTH": True,
+    "REFETCH_SCHEMA_ON_LOGOUT": True,
+    "VALIDATOR_URL": "",
+    "OPERATIONS_SORTER": "method",
+    "TAGS_SORTER": "alpha",
+    "DOC_EXPANSION": "None",
+    "DEEP_LINKING": False,
+    "SHOW_EXTENSIONS": True,
+    "DEFAULT_INFO": "commons.swagger.swagger_info",
+    "DEFAULT_MODEL_RENDERING": "model",
+    "DEFAULT_MODEL_DEPTH": 2,
+}
+SWAGGER_CACHE_TIMEOUT = config("SWAGGER_CACHE_TIMEOUT", 3600) if DEBUG is False else 0
