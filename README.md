@@ -44,7 +44,7 @@ Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 aci
 
 Este endpoint retorna um <em>access token</em> que pode ser utilizado no outro endpoint, descrito a seguir:<br>
 
-(Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token)<br>
+(<u>Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token</u>)<br>
 
 <h3>End-point para consulta de dados</h3>
 
