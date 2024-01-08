@@ -9,7 +9,7 @@ Para executar localmente, siga os passos abaixo:
 ```git clone git@github.com:ricardocarmo72/api_sample.git```
 
 2. Ative o ambiente virtual:<br>
-Se estiver usando <b>Windows</b>, apenas ative a env que está na pasta env e pule para o passo 3:<br>
+Se estiver usando <b>Windows</b>, ative a env que está na pasta env com o comando:<br>
 ```env\scripts\activate```<br>
 Se estiver usando <b>Linux</b>, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
 ```python3 -m venv env```<br>
