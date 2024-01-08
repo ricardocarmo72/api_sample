@@ -73,6 +73,9 @@ Exemplo de payload:<br>
 
 (Utilizar o arquivo .TXT existente na pasta raiz do projeto)
 
+<h3>Logs das requisições</h3>
+Foi implementado via middleware, exibindo o log no console do terminal. Pode ser facilmente adaptado para persistir em banco ou integrar com outras ferramentas, como ELK, New Relic, etc.
+
 <h3>Postman</h3>
 Para facilitar os testes com a API, foi adicionado o arquivo Hyperativa.postman_collection.json na pasta raiz do projeto.
 Basta importar no Postman e acessar os endpoints da coleção.
