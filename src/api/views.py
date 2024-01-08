@@ -57,17 +57,20 @@ class FullCardViewSet(ViewSet):
             ),
             Parameter(
                 name="card_number",
-                description="Número do cartão a inserir quando insert_mode=single",
+                description="Número do cartão a inserir, obrigatório se insert_mode=single",
                 type=openapi.TYPE_STRING,
                 in_=openapi.IN_FORM,
-                required=True,
+                required=False,
             ),
             Parameter(name="file_uploaded",
                     in_=openapi.IN_FORM,
                     type=openapi.TYPE_FILE,
                     required=False,
-                    description="Arquivo .TXT para upload quando insert_mode=multiple")
-        ]
+                    description="Arquivo .TXT para upload, obrigatório se insert_mode=multiple")
+        ],
+        operation_description='Insere um ou vários números de cartões, conforme o parâmetro insert_mode.',
+        responses={status.HTTP_200_OK: openapi.Response(description="Cartão inserido.", 
+                                                        schema=FullCardSerializer(many=True))}
     )
     @action(methods=['post'], detail=False)
     def create(self, request):
