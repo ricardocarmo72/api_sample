@@ -30,6 +30,8 @@ Em seguida instale as bibliotecas requeridas:<br>
 6. Suba a aplicação:<br>
 ```python manage.py runserver```
 
+<h3>testes</h3>
+
 Para rodar os testes, digite:<br>
 ```python manage.py test```
 
