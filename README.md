@@ -34,6 +34,11 @@ Em seguida instale as bibliotecas requeridas:<br>
 Para rodar os testes, digite:<br>
 ```python manage.py test```
 
+<h3>Documentação</h3>
+
+A documentação (contratos da API) pode ser conferida via Swagger:<br>
+```http://localhost:8000/token/```<br>
+
 A aplicação expõe dois endpoints:<br>
 
 <h3>End-point para autenticação do usuário:</h3>
