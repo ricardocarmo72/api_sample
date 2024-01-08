@@ -9,9 +9,9 @@ Para executar localmente, siga os passos abaixo:
 ```git clone git@github.com:ricardocarmo72/api_sample.git```
 
 2. Ative o ambiente virtual:<br>
-Se estiver usando Windows, apenas ative a env que está na pasta env e pule para o passo 3:<br>
+Se estiver usando <b>Windows</b>, apenas ative a env que está na pasta env e pule para o passo 3:<br>
 ```env\scripts\activate```<br>
-Se estiver usando Linux, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
+Se estiver usando <b>Linux</b>, crie e ative uma env utilizando uma versão do Python igual ou superior a 3.8:<br>
 ```python3 -m venv env```<br>
 ```source env/bin/activate```<br>
 Em seguida instale as bibliotecas requeridas:<br>
@@ -42,7 +42,7 @@ A aplicação expõe dois endpoints:<br>
 Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 acima):<br>
 ```{"username": "test_user", "password": "test123"}```<br>
 
-Este endpoint retorna um access token que pode ser utilizado no outro endpoint, descrito a seguir:<br>
+Este endpoint retorna um <em>access token</em> que pode ser utilizado no outro endpoint, descrito a seguir:<br>
 
 (Em todos os requests abaixo, o token de autenticação deve ser passado no header como Bearer token)<br>
 
@@ -61,6 +61,8 @@ Exemplo de payload:<br>
 Deve ser executado via <b>POST</b>: ```http://localhost:8000/api/```<br>
 Exemplo de payload:<br>
 ```{"insert_mode": "multiple", "file_uploaded": <arquivo>}```
+
+(Utilizar o arquivo .TXT existente na pasta raiz do projeto)
 
 <h3>Postman</h3>
 Para facilitar os testes com a API, foi adicionado o arquivo Hyperativa.postman_collection.json na pasta raiz do projeto.
