@@ -38,7 +38,8 @@ A aplicação expõe dois endpoints:<br>
 
 <h3>End-point para autenticação do usuário:</h3>
 
-- Deve ser executado via <b>POST</b>: ```http://localhost:8000/token/```<br>
+- Deve ser executado via <b>POST</b>:<br>
+```http://localhost:8000/token/```<br>
 Exemplo de payload (Deve ser passado o mesmo usuário/senha usado no passo 5 acima):<br>
 ```{"username": "test_user", "password": "test123"}```<br>
 
